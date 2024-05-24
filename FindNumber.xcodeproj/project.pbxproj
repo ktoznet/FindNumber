@@ -13,6 +13,8 @@
 		943640022BFBDB73009BBE0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943640012BFBDB73009BBE0E /* Assets.xcassets */; };
 		943640052BFBDB73009BBE0E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 943640042BFBDB73009BBE0E /* Base */; };
 		9458CCAC2BFE0721002B9CBC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458CCAB2BFE0721002B9CBC /* Game.swift */; };
+		9461D25F2C00C20F00E59C67 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461D25E2C00C20F00E59C67 /* YellowViewController.swift */; };
+		9461D2612C00C5E400E59C67 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461D2602C00C5E400E59C67 /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		943640042BFBDB73009BBE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		943640062BFBDB73009BBE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9458CCAB2BFE0721002B9CBC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		9461D25E2C00C20F00E59C67 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		9461D2602C00C5E400E59C67 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				942DFDEE2BFD20A700FDD8F7 /* GameViewController.swift */,
+				9461D25E2C00C20F00E59C67 /* YellowViewController.swift */,
+				9461D2602C00C5E400E59C67 /* BlueViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -162,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9461D25F2C00C20F00E59C67 /* YellowViewController.swift in Sources */,
 				942DFDEF2BFD20A700FDD8F7 /* GameViewController.swift in Sources */,
 				9458CCAC2BFE0721002B9CBC /* Game.swift in Sources */,
+				9461D2612C00C5E400E59C67 /* BlueViewController.swift in Sources */,
 				94363FF92BFBDB73009BBE0E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
