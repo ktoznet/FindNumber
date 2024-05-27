@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var newGameButton: UIButton!
     
-    lazy var  game = Game(countItems: Button.count, time: 30) { [weak self] (status, second) in
+    lazy var  game = Game(countItems: Button.count) { [weak self] (status, second) in
         
         guard let self = self else {return}
         
@@ -24,6 +24,10 @@ class GameViewController: UIViewController {
         self.updateInfoGame(with: status)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        game.stopGame()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

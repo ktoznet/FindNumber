@@ -15,6 +15,7 @@
 		943640022BFBDB73009BBE0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943640012BFBDB73009BBE0E /* Assets.xcassets */; };
 		943640052BFBDB73009BBE0E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 943640042BFBDB73009BBE0E /* Base */; };
 		9458CCAC2BFE0721002B9CBC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458CCAB2BFE0721002B9CBC /* Game.swift */; };
+		94E386CE2C04D23000D6CF4B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E386CD2C04D23000D6CF4B /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		943640042BFBDB73009BBE0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		943640062BFBDB73009BBE0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9458CCAB2BFE0721002B9CBC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		94E386CD2C04D23000D6CF4B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				942DFDEE2BFD20A700FDD8F7 /* GameViewController.swift */,
 				941FA62F2C0331A500FAF235 /* SelectTimeViewController.swift */,
 				941FA6332C03322D00FAF235 /* SettingTableViewController.swift */,
+				94E386CD2C04D23000D6CF4B /* Settings.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E386CE2C04D23000D6CF4B /* Settings.swift in Sources */,
 				942DFDEF2BFD20A700FDD8F7 /* GameViewController.swift in Sources */,
 				9458CCAC2BFE0721002B9CBC /* Game.swift in Sources */,
 				94363FF92BFBDB73009BBE0E /* AppDelegate.swift in Sources */,

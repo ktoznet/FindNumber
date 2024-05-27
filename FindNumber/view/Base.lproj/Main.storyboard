@@ -435,6 +435,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oai-a5-7kO">
                                                     <rect key="frame" x="345" y="6.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="changeTimerState:" destination="Spb-Bk-k7B" eventType="valueChanged" id="x76-hS-RpC"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -487,6 +490,9 @@
                                                     <rect key="frame" x="167.5" y="4.5" width="79" height="35"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Default"/>
+                                                    <connections>
+                                                        <action selector="resetSettings:" destination="Spb-Bk-k7B" eventType="touchUpInside" id="jxe-ZX-PWj"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -504,6 +510,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Настройки" id="jZ0-L0-U9J"/>
+                    <connections>
+                        <outlet property="switchTimer" destination="oai-a5-7kO" id="bub-Mb-8lx"/>
+                        <outlet property="timeGameLabel" destination="gze-Xz-JzY" id="h4X-s7-hhw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ART-Wo-Hbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

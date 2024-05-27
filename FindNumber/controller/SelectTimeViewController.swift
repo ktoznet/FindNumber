@@ -38,13 +38,9 @@ extension SelectTimeViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        UserDefaults.standard.setValue(data[indexPath.row], forKey: "timeForGame")
-        
-        UserDefaults.standard.integer(forKey: "timeForGame")
-        if UserDefaults.standard.object(forKey: "") != nil{
-            
-        }
-        print(data[indexPath.row])
+    
+        Settings.shared.currentSettings.timeForGame = data[indexPath.row]
+        navigationController?.popViewController(animated: true)
     }
     
     
