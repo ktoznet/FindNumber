@@ -31,7 +31,11 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if navigationController == nil {
+                   print("Этот контроллер не встроен в UINavigationController.")
+               } else {
+                   print("Этот контроллер встроен в UINavigationController.")
+               }
         setupeScreen()
     }
     
@@ -89,14 +93,61 @@ class GameViewController: UIViewController {
             statusLabel.text = "Вы выйграли"
             statusLabel.textColor = .green
             newGameButton.isHidden =  false
+            if game.isNewRecord{
+                showAlert()
+            }else{
+                showAlertActionSheet()
+            }
         case .lose:
             statusLabel.text = "Вы проиграли"
             statusLabel.textColor = .red
             newGameButton.isHidden =  false 
+            showAlertActionSheet()
         }
     }
     
     private func title(){
         nextDigit.text = game.nextItem?.title
     }
+    
+    private func showAlert(){
+        let alert = UIAlertController(title: "Поздравляем", message: "Вы установили рекорд", preferredStyle: .alert)
+        
+        let okayAction = UIAlertAction(title: "OK", style: .default,handler: nil)
+        
+        alert.addAction(okayAction)
+        present(alert,animated: true,completion: nil)
+    }
+    
+    private func showAlertActionSheet(){
+        let alert = UIAlertController(title: "Что вы хотите", message: nil,preferredStyle: .actionSheet)
+        
+        let newGameAction = UIAlertAction(title: "Новая игра", style: .default){ [weak self](_) in
+            self?.game.newGame()
+            self?.setupeScreen()
+        }
+        let showRecord = UIAlertAction(title: "Check Record", style: .default){ [weak self](_) in
+            self?.performSegue(withIdentifier: "recordVC", sender: nil)
+        }
+        
+        let menuAction = UIAlertAction(title: "Перейти в меню", style: .destructive){ [weak self] (_) in
+            if let navigationController = self?.navigationController {
+                        navigationController.popViewController(animated: true)
+                    } else {
+                        print("Navigation controller is nil")
+                    }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel,handler: nil)
+        
+        alert.addAction(newGameAction)
+        alert.addAction(showRecord)
+        alert.addAction(menuAction)
+        alert.addAction(cancelAction)
+        
+        if let popover = alert.popoverPresentationController{
+            popover.sourceView = statusLabel
+        }
+        present(alert,animated: true, completion: nil)
+    }
+
 }
